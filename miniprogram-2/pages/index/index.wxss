@@ -1,0 +1,44 @@
+.base-background {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: #333;
+  min-height: 100vh;
+  background-image: linear-gradient(to top left, #fcfdfc, #f4f8f5, #e0f1e1);
+}
+.base-background .phs {
+  flex-direction: row;
+  height: 520rpx;
+  -webkit-appearance: none;
+}
+.base-background .phs .phbox {
+  white-space: nowrap;
+}
+.base-background .phs .phbox .inlineph {
+  display: inline-block;
+}
+.base-background .hello1 {
+  height: 60rpx;
+  width: 100%;
+  font-size: 35rpx;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: 700;
+  letter-spacing: 6rpx;
+  text-shadow: 0 1rpx 1rpx #999;
+}
+.base-background .hello2 {
+  width: 100%;
+  font-size: 25rpx;
+  color: #999;
+}
+.base-background .scroll-container {
+  flex: 1;
+  padding-bottom: 100rpx;
+}
+.base-background .bottom-space {
+  height: 90rpx;
+}
+.container {
+  width: 100%;
+  min-height: 20rpx;
+}

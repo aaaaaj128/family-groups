@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="login-card">
+    <text class="title">家庭组</text>
+    
+    <input class="input" placeholder="手机号" bindinput="onPhoneInput" />
+    <input class="input" placeholder="密码" password bindinput="onPwdInput" />
+    
+    <button class="login-btn" bindtap="doLogin">登录</button>
+    
+    <view class="register-tip" bindtap="showRegister">还没有账号？立即注册</view>
+  </view>
+</view>
+
+<!-- 注册弹窗 -->
+<view class="modal-mask" wx:if="{{showRegisterModal}}" bindtap="closeModal">
+  <view class="modal-container" catchtap="stopPropagation">
+    <text class="modal-title">注册新账号</text>
+    <input class="modal-input" placeholder="用户名" bindinput="onRegUsername" />
+    <input class="modal-input" placeholder="手机号" bindinput="onRegPhone" />
+    <input class="modal-input" placeholder="密码" password bindinput="onRegPwd" />
+    <view class="modal-buttons">
+      <button class="modal-btn cancel" bindtap="closeModal">取消</button>
+      <button class="modal-btn confirm" bindtap="doRegister">注册</button>
+    </view>
+  </view>
+</view>

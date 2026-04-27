@@ -1,0 +1,94 @@
+/* pages/profile/profile.wxss */
+.container {
+  padding: 32rpx;
+  min-height: 100vh;
+  background: #f5faf6;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 40rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.03);
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48rpx;
+  padding-bottom: 32rpx;
+  border-bottom: 1px solid #e8f0e8;
+}
+
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  background: #d8f3dc;
+  border: 3rpx solid #95d5b2;
+}
+
+.avatar-edit {
+  margin-top: 16rpx;
+}
+
+.edit-text {
+  font-size: 24rpx;
+  color: #1a1a1a;
+  background: #f0faf0;
+  padding: 8rpx 24rpx;
+  border-radius: 40rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  padding: 24rpx 0;
+  border-bottom: 1px solid #e8f0e8;
+}
+
+.label {
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.value {
+  flex: 1;
+  font-size: 28rpx;
+  color: #1a1a1a;
+  padding: 8rpx 0;
+}
+
+.input-value {
+  flex: 1;
+  font-size: 28rpx;
+  color: #1a1a1a;
+  background: #f8faf8;
+  padding: 16rpx 20rpx;
+  border-radius: 16rpx;
+  border: 1px solid #e8f0e8;
+}
+
+.save-btn {
+  background: #2d6a4f;
+  color: #ffffff;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  margin-top: 40rpx;
+  border-radius: 44rpx;
+}
+
+.logout-btn {
+  background: #ffffff;
+  color: #ff4757;
+  border: 1px solid #ff4757;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  border-radius: 44rpx;
+}

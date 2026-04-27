@@ -1,0 +1,47 @@
+<!--pages/records/records.wxml-->
+<view class="container">
+  
+  <view class="member-selector">
+    <text>选择成员：</text>
+    <picker mode="selector" range="{{memberNames}}" bindchange="onMemberChange">
+      <view class="picker">{{selectedMemberName}}</view>
+    </picker>
+  </view>
+  
+  <!-- 病历列表 - 均匀填充 -->
+  <scroll-view scroll-y class="record-list" wx:if="{{medicalList.length > 0}}">
+    <view wx:for="{{medicalList}}" wx:key="_id" class="record-item">
+      <view class="record-time">📅 {{item.visitTime}}</view>
+      <view class="record-diagnosis">{{item.diagnosis}}</view>
+      <view class="record-treatment" wx:if="{{item.treatment}}">💊 治疗：{{item.treatment}}</view>
+      <view class="record-medication" wx:if="{{item.medication}}">💊 用药：{{item.medication}}</view>
+      <view class="record-doctor" wx:if="{{item.doctorName}}">👨‍⚕️ 医生：{{item.doctorName}}</view>
+    </view>
+  </scroll-view>
+  
+  <!-- 空状态 -->
+  <view class="empty-tip" wx:if="{{medicalList.length === 0}}">
+    <text>📭 暂无病历记录</text>
+  </view>
+  
+  <!-- 添加按钮 -->
+  <button class="add-btn" bindtap="showAddModal">+ 添加病历</button>
+</view>
+
+<!-- 添加病历弹窗 -->
+<view class="modal-mask" wx:if="{{showAddModal}}" bindtap="closeModal">
+  <view class="modal-container" catchtap="stopPropagation">
+    <text class="modal-title">添加病历</text>
+    <view class="modal-form">
+      <input class="modal-input" placeholder="就诊时间（如：2025-04-01）" bindinput="onVisitTimeInput" />
+      <input class="modal-input" placeholder="诊断结果" bindinput="onDiagnosisInput" />
+      <input class="modal-input" placeholder="治疗建议" bindinput="onTreatmentInput" />
+      <input class="modal-input" placeholder="用药建议" bindinput="onMedicationInput" />
+      <input class="modal-input" placeholder="医生姓名" bindinput="onDoctorInput" />
+    </view>
+    <view class="modal-buttons">
+      <button class="modal-btn cancel" bindtap="closeModal">取消</button>
+      <button class="modal-btn confirm" bindtap="addMedicalRecord">确认</button>
+    </view>
+  </view>
+</view>

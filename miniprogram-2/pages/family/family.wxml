@@ -1,0 +1,54 @@
+<!--pages/family/family.wxml-->
+<view class="container">
+  
+  <!-- 家庭成员列表 -->
+  <view class="family-list">
+    <block wx:for="{{familyMembers}}" wx:key="_id">
+      <view class="family-card">
+        <!-- 头像区域 -->
+        <view class="family-avatar">
+          <image class="avatar-img" src="{{item.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+        </view>
+        
+        <!-- 信息区域 -->
+        <view class="family-info">
+          <view class="family-name-row">
+            <text class="family-name">{{item.username}}</text>
+            <text class="family-role">{{item.role || '成员'}}</text>
+          </view>
+          <view class="family-detail">
+            <text class="family-phone"> {{item.phone || '未填写'}}</text>
+          </view>
+        </view>
+        
+        <!-- 操作按钮 -->
+        <view class="family-actions" wx:if="{{item._id !== currentUser._id}}">
+          <button class="delete-btn" size="mini" bindtap="deleteFamily" data-id="{{item._id}}">删除</button>
+        </view>
+        <view class="family-tag" wx:else>
+          <text class="self-tag">本人</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  
+  <!-- 添加成员按钮 -->
+  <button class="add-btn" bindtap="showAddModal">+ 添加成员</button>
+</view>
+
+<!-- 添加成员弹窗 -->
+<view class="modal-mask" wx:if="{{showAddModal}}" bindtap="closeModal">
+  <view class="modal-container" catchtap="stopPropagation">
+    <text class="modal-title">添加家庭成员</text>
+    <view class="modal-form">
+      <input class="modal-input" placeholder="姓名" bindinput="onNameInput" />
+      <input class="modal-input" placeholder="角色（如：父亲、母亲）" bindinput="onRoleInput" />
+      <input class="modal-input" placeholder="手机号" bindinput="onPhoneInput" />
+      <input class="modal-input" placeholder="密码" password bindinput="onPwdInput" />
+    </view>
+    <view class="modal-buttons">
+      <button class="modal-btn cancel" bindtap="closeModal">取消</button>
+      <button class="modal-btn confirm" bindtap="addFamilyMember">确认</button>
+    </view>
+  </view>
+</view>

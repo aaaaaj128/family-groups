@@ -1,0 +1,199 @@
+/* pages/family/family.wxss */
+.container {
+  padding: 32rpx;
+  min-height: 100vh;
+  background-color: #f5faf6;
+  box-sizing: border-box;
+}
+
+/* 家庭成员列表 */
+.family-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  margin-bottom: 32rpx;
+}
+
+/* 单个成员卡片 */
+.family-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 32rpx;
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.03);
+  border: 1px solid #e8f0e8;
+  transition: all 0.2s;
+}
+
+.family-card:active {
+  transform: scale(0.98);
+  background: #fafdfa;
+}
+
+/* 头像区域 */
+.family-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #d8f3dc;
+  border: 2rpx solid #95d5b2;
+}
+
+/* 信息区域 */
+.family-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+/* 姓名行 */
+.family-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16rpx;
+  flex-wrap: wrap;
+}
+
+.family-name {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #615f5f;
+}
+
+.family-role {
+  font-size: 24rpx;
+  color: #666666;
+  background: #f0faf0;
+  padding: 4rpx 16rpx;
+  border-radius: 24rpx;
+}
+
+/* 详细信息行 */
+.family-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.family-phone {
+  font-size: 26rpx;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+
+/* 操作按钮区域 */
+.family-actions {
+  flex-shrink: 0;
+}
+
+.delete-btn {
+  background: #ffffff;
+  color: #ff4757;
+  border: 1px solid #ff4757;
+  border-radius: 32rpx;
+  font-size: 24rpx;
+  padding: 12rpx 24rpx;
+  height: auto;
+  line-height: 1.2;
+}
+
+/* 本人标签 */
+.family-tag {
+  flex-shrink: 0;
+}
+
+.self-tag {
+  font-size: 24rpx;
+  color: #2d6a4f;
+  background: #f0faf0;
+  padding: 8rpx 20rpx;
+  border-radius: 32rpx;
+}
+
+/* 添加按钮 */
+.add-btn {
+  background: #2d6a4f;
+  color: #ffffff;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  border-radius: 44rpx;
+  margin-top: 16rpx;
+}
+
+/* ========== 弹窗样式 ========== */
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  width: 85%;
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 40rpx;
+}
+
+.modal-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 32rpx;
+  color: #1a1a1a;
+}
+
+.modal-input {
+  background: #f8faf8;
+  padding: 22rpx 28rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  border: 1px solid #e8f0e8;
+  border-radius: 16rpx;
+  color: #1a1a1a;
+}
+
+.modal-input:focus {
+  border-color: #95d5b2;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 20rpx;
+}
+
+.modal-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-radius: 40rpx;
+}
+
+.modal-btn.cancel {
+  background: #f0faf0;
+  color: #666666;
+}
+
+.modal-btn.confirm {
+  background: #2d6a4f;
+  color: #fff;
+}

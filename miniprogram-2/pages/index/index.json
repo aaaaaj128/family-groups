@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "phdata": "../../components/phdata/phdata",
+    "aiadv": "../../components/aiadv/aiadv",
+    "missionto": "../../components/missionto/missionto",
+    "adshow": "../../components/adshow/adshow"
+  }
+}

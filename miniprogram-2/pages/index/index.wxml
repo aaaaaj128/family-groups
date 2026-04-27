@@ -1,0 +1,23 @@
+<view class="base-background">
+  <scroll-view scroll-y="true" class="scroll-container">
+    <view class="hello1">
+      <head1 u-s="{{['d']}}" u-i="3584e1d9-0" bind:__l="__l">早上好,董宇航</head1>
+    </view>
+    <view class="hello2">
+      <head2 u-s="{{['d']}}" u-i="3584e1d9-1" bind:__l="__l">健康生活，从一个小建议做起！</head2>
+    </view>
+    <scroll-view class="phs" scroll-x scrollbar="{{false}}" show-scrollbar="{{false}}">
+      <view class="phbox">
+        <phdata wx:for="{{a}}" wx:for-item="i" wx:key="a" class="inlineph" u-i="{{i.b}}" bind:__l="__l" u-p="{{i.c}}"></phdata>
+      </view>
+    </scroll-view>
+    <aiadv u-i="3584e1d9-3" bind:__l="__l"></aiadv>
+    <view class="container">
+      <missionto wx:for="{{b}}" wx:for-item="item" wx:key="a" u-s="{{['d']}}" u-i="{{item.b}}" bind:__l="__l" u-p="{{item.c}}">111</missionto>
+    </view>
+    <view class="container">
+      <adshow wx:if="{{c}}" u-i="3584e1d9-5" bind:__l="__l" u-p="{{c}}"></adshow>
+    </view>
+    <view class="bottom-space"></view>
+  </scroll-view>
+</view>

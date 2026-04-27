@@ -1,0 +1,158 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.messi {
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.messi head1 {
+  width: 100%;
+  font-weight: 500;
+  color: gray;
+  font-size: 25rpx;
+  height: 40rpx;
+  justify-content: center;
+}
+.messi head2 {
+  font-size: 30rpx;
+  font-weight: 700;
+  height: 40rpx;
+  justify-content: center;
+}
+.messi head3 {
+  margin-top: 7rpx;
+  font-weight: 100;
+  justify-content: center;
+  height: 40rpx;
+  font-size: 25rpx;
+  color: #71cb6f;
+}
+.tubiaoa {
+  height: 58%;
+  width: 80%;
+}
+.toptip {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  font-weight: 700;
+}
+.phd {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+  width: 92%;
+  border: 2rpx solid #ffffff;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+  height: 440rpx;
+  border-radius: 3%;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  background-color: white;
+  -webkit-tap-highlight-color: transparent !important;
+}
+.phd:active {
+  transform: scale(1.05);
+  /* 缩到95% */
+  box-shadow: 0 8rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+.aa1 {
+  display: flex;
+  width: 300rpx;
+  margin-left: 10rpx;
+  height: 39%;
+  border-right: 2rpx, solid #ffffff;
+  align-items: center;
+}
+.aa1 .tubiao1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rpx;
+  height: 80%;
+  width: 30%;
+  border: 2rpx solid #f7f7f6;
+  border-radius: 40%;
+  background-color: #f6f4f4;
+}
+.aa2 {
+  margin-left: 10rpx;
+  display: flex;
+  width: 300rpx;
+  height: 39%;
+  border-right: 2rpx, solid #ffffff;
+  align-items: center;
+}
+.aa2 .tubiao2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 10rpx;
+  height: 80%;
+  width: 30%;
+  border: 2rpx solid #f7f7f6;
+  border-radius: 40%;
+  background-color: #f6f4f4;
+}
+.aa3 {
+  display: flex;
+  margin-left: 10rpx;
+  width: 300rpx;
+  height: 39%;
+  border-right: 2rpx, solid #ffffff;
+  align-items: center;
+}
+.aa3 .tubiao3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rpx;
+  height: 80%;
+  width: 30%;
+  border: 2rpx solid #f7f7f6;
+  border-radius: 40%;
+  background-color: #f6f4f4;
+}
+.aa4 {
+  display: flex;
+  width: 300rpx;
+  height: 39%;
+  border-right: 2rpx, solid #ffffff;
+  align-items: center;
+}
+.aa4 .tubiao4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rpx;
+  height: 80%;
+  width: 30%;
+  border: 2rpx solid #f7f7f6;
+  border-radius: 40%;
+  background-color: #f6f4f4;
+}

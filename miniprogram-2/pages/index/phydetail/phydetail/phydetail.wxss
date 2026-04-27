@@ -1,0 +1,207 @@
+
+page{
+	background:#f7f8f6;
+}
+.page-wrap{
+	padding:24rpx;
+}
+
+/* 用户卡片 */
+.user-card{
+	background:#fff;
+	border-radius:28rpx;
+	padding:24rpx;
+	display:flex;
+	align-items:center;
+	margin-bottom:24rpx;
+	box-shadow:0 8rpx 20rpx rgba(0,0,0,.03);
+}
+.user-avatar{
+	width:96rpx;
+	height:96rpx;
+	border-radius:50%;
+	background:#eee;
+	margin-right:20rpx;
+}
+.user-name{
+	font-size:34rpx;
+	font-weight:bold;
+	color:#222;
+}
+.user-desc{
+	font-size:24rpx;
+	color:#888;
+	margin-top:10rpx;
+}
+
+/* tab */
+.tab-wrap{
+	display:flex;
+	background:#fff;
+	border-radius:26rpx;
+	padding:8rpx;
+	margin-bottom:24rpx;
+	box-shadow:0 8rpx 20rpx rgba(0,0,0,.03);
+}
+.tab-item{
+	flex:1;
+	text-align:center;
+	padding:22rpx 0;
+	font-size:30rpx;
+	color:#777;
+}
+.active{
+	color:#24b35a;
+	font-weight:bold;
+	border-bottom:4rpx solid #24b35a;
+}
+.swiper-box{
+	height:calc(100vh - 280rpx);
+}
+.scroll-page{
+	height:100%;
+}
+
+/* 卡片 */
+.card{
+	background:#fff;
+	border-radius:28rpx;
+	padding:28rpx;
+	margin-bottom:24rpx;
+	box-shadow:0 8rpx 20rpx rgba(0,0,0,.03);
+}
+.mini-card{
+	margin-top:20rpx;
+	background:#fafafa;
+	box-shadow:none;
+}
+.card-head{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	margin-bottom:20rpx;
+}
+.title{
+	font-size:32rpx;
+	font-weight:bold;
+	color:#222;
+}
+.date,.sub{
+	font-size:24rpx;
+	color:#888;
+}
+.desc{
+	font-size:28rpx;
+	color:#555;
+	line-height:44rpx;
+}
+
+/* grid */
+.grid{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	grid-gap:20rpx;
+}
+.small-card{
+	background:#f8faf8;
+	border-radius:24rpx;
+	padding:24rpx;
+}
+.label{
+	display:block;
+	font-size:26rpx;
+	color:#666;
+	margin-bottom:18rpx;
+}
+.value{
+	font-size:48rpx;
+	font-weight:bold;
+	color:#111;
+}
+.unit{
+	font-size:24rpx;
+	color:#777;
+	margin-left:8rpx;
+}
+.tag{
+	display:inline-block;
+	margin-top:18rpx;
+	padding:6rpx 16rpx;
+	border-radius:999rpx;
+	font-size:22rpx;
+}
+.green{
+	background:#e8f8ee;
+	color:#24b35a;
+}
+.more-btn{
+	margin-top:24rpx;
+	text-align:center;
+	padding:22rpx 0;
+	background:#eef8f0;
+	color:#24b35a;
+	font-size:28rpx;
+	border-radius:22rpx;
+	font-weight:bold;
+}
+
+/* 趋势图 */
+.chart-box{
+	height:260rpx;
+	background:#fafafa;
+	border-radius:20rpx;
+	position:relative;
+	overflow:hidden;
+	margin-top:20rpx;
+}
+.line{
+	position:absolute;
+	left:30rpx;
+	right:30rpx;
+	height:4rpx;
+	border-radius:20rpx;
+}
+.one{
+	top:80rpx;
+	background:#4a8cff;
+	transform:rotate(-8deg);
+}
+.two{
+	top:140rpx;
+	background:#24b35a;
+	transform:rotate(2deg);
+}
+.three{
+	top:200rpx;
+	background:#8f5cff;
+	transform:rotate(-2deg);
+}
+
+/* 病历 */
+.hospital{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	margin-top:20rpx;
+	margin-bottom:14rpx;
+}
+.hos-name{
+	font-size:34rpx;
+	font-weight:bold;
+	color:#222;
+}
+.big-text{
+	font-size:36rpx;
+	font-weight:bold;
+	margin-top:12rpx;
+	color:#222;
+}
+.li{
+	font-size:28rpx;
+	color:#555;
+	line-height:46rpx;
+}
+.detail-btn{
+	color:#24b35a;
+	font-size:28rpx;
+}
