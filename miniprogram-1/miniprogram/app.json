@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/family/family",
+    "pages/records/records"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "家庭医疗助手",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f5f5"
+  }
+}

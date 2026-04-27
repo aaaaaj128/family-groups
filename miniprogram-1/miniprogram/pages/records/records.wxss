@@ -1,0 +1,192 @@
+/* pages/records/records.wxss */
+
+page {
+  height: 100%;
+  width: 100%;
+  background-color: #f5faf6;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background: #f5faf6;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.member-selector {
+  background: #ffffff;
+  padding: 24rpx 32rpx;
+  margin-bottom: 2rpx;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.member-selector text {
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.picker {
+  flex: 1;
+  padding: 16rpx 24rpx;
+  background: #f8faf8;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  border-radius: 16rpx;
+  color: #1a1a1a;
+}
+
+/* 病历列表 - 横向纵向都填充 */
+.record-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.record-item {
+  flex: 1;
+  padding: 32rpx 32rpx;
+  border-bottom: 1rpx solid #e8f0e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-time {
+  font-size: 26rpx;
+  color: #888888;
+  margin-bottom: 12rpx;
+}
+
+.record-diagnosis {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 16rpx;
+}
+
+.record-treatment, 
+.record-medication, 
+.record-doctor {
+  font-size: 26rpx;
+  color: #555555;
+  margin-bottom: 8rpx;
+  line-height: 1.4;
+}
+
+/* 空状态 */
+.empty-tip {
+  text-align: center;
+  padding: 80rpx 0;
+  color: #aaaaaa;
+  font-size: 28rpx;
+  background: #ffffff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 添加按钮 - 固定在底部，横向填充 */
+.add-btn {
+  background: #2d6a4f;
+  color: #ffffff;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  margin: 0;
+  border-radius: 0;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 弹窗 */
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  width: 85%;
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 40rpx;
+  overflow-y: auto;
+}
+
+.modal-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 32rpx;
+  color: #1a1a1a;
+}
+
+.modal-input {
+  background: #f8faf8;
+  padding: 22rpx 28rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  border: 1px solid #e8f0e8;
+  border-radius: 16rpx;
+  color: #1a1a1a;
+}
+
+.modal-input:focus {
+  border-color: #95d5b2;
+}
+
+.modal-input::placeholder {
+  color: #aaaaaa;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 20rpx;
+}
+
+.modal-btn {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  border-radius: 40rpx;
+}
+
+.modal-btn.cancel {
+  background: #f0faf0;
+  color: #666666;
+}
+
+.modal-btn.confirm {
+  background: #2d6a4f;
+  color: #ffffff;
+}

@@ -1,0 +1,68 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  
+  <!-- 登录区域 -->
+  <view class="login-area" wx:if="{{!isLogin}}">
+    <view class="login-card">
+      <text class="login-title">家庭组</text>
+      <input class="login-input" placeholder="手机号" bindinput="onPhoneInput" />
+      <input class="login-input" placeholder="密码" password bindinput="onPwdInput" />
+      <button class="login-btn" bindtap="doLogin">登录</button>
+      <view class="register-tip" bindtap="showRegister">还没有账号？立即注册</view>
+    </view>
+  </view>
+
+  <!-- 主界面：三模块固定在顶部 -->
+  <view class="main-content" wx:else>
+    
+    <!-- 个人信息模块（含问候语） -->
+    <view class="module-card" bindtap="goToProfile">
+      <view class="module-avatar">
+        <image class="avatar-img" src="{{currentUser.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="module-info">
+        <view class="name-row">
+          <text class="greeting-text">{{greetingText}}，</text>
+          <text class="module-name">{{currentUser.username}}</text>
+        </view>
+        <text class="module-role">{{currentUser.role || '成员'}}</text>
+      </view>
+      <view class="module-arrow">›</view>
+    </view>
+
+    <!-- 家庭成员模块 -->
+    <view class="module-card" bindtap="goToFamily">
+      <view class="module-icon">👨‍👩‍👧</view>
+      <view class="module-info">
+        <text class="module-title">家庭成员</text>
+      </view>
+      <view class="module-arrow">›</view>
+    </view>
+
+    <!-- 病历记录模块 -->
+    <view class="module-card" bindtap="goToRecords">
+      <view class="module-icon">📋</view>
+      <view class="module-info">
+        <text class="module-title">病历记录</text>
+      </view>
+      <view class="module-arrow">›</view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 注册弹窗 -->
+<view class="modal-mask" wx:if="{{showRegisterModal}}" bindtap="closeModal">
+  <view class="modal-container" catchtap="stopPropagation">
+    <text class="modal-title">注册新账号</text>
+    <view class="modal-form">
+      <input class="modal-input" placeholder="用户名" bindinput="onRegUsername" />
+      <input class="modal-input" placeholder="手机号" bindinput="onRegPhone" />
+      <input class="modal-input" placeholder="密码" password bindinput="onRegPwd" />
+    </view>
+    <view class="modal-buttons">
+      <button class="modal-btn cancel" bindtap="closeModal">取消</button>
+      <button class="modal-btn confirm" bindtap="doRegister">注册</button>
+    </view>
+  </view>
+</view>
