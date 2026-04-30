@@ -1,1 +1,90 @@
-<view></view>
+<!-- pages/market/market.wxml -->
+<view class="market-container">
+  
+  <!-- 顶部搜索栏 -->
+  <view class="search-bar">
+    <view class="search-input" bindtap="goToSearch">
+      <text class="search-icon">🔍</text>
+      <text class="search-placeholder">搜索医疗器械、保健品、药品...</text>
+    </view>
+    <view class="message-icon" bindtap="goToMessage">
+      <text class="msg-icon">💬</text>
+      <view class="msg-badge" wx:if="{{messageCount > 0}}">{{messageCount}}</view>
+    </view>
+  </view>
+
+  <!-- 轮播图 -->
+  <swiper class="banner-swiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" circular="{{true}}" indicator-color="rgba(0,0,0,0.3)" indicator-active-color="#2d6a4f">
+    <swiper-item wx:for="{{bannerList}}" wx:key="index">
+      <image class="banner-img" src="{{item.image}}" mode="aspectFill" bindtap="onBannerTap" data-url="{{item.url}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 图标入口网格（医疗健康相关） -->
+  <view class="icon-grid">
+    <view class="icon-item" wx:for="{{iconList}}" wx:key="index" bindtap="onIconTap" data-type="{{item.type}}">
+      <image class="icon-img" src="{{item.icon}}" mode="aspectFill"></image>
+      <text class="icon-text">{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 头条公告 -->
+  <view class="notice-bar" bindtap="onNoticeTap">
+    <text class="notice-icon">📢</text>
+    <swiper class="notice-swiper" vertical="{{true}}" autoplay="{{true}}" interval="{{3000}}" circular="{{true}}">
+      <swiper-item wx:for="{{noticeList}}" wx:key="index">
+        <text class="notice-text">{{item}}</text>
+      </swiper-item>
+    </swiper>
+    <text class="notice-arrow">›</text>
+  </view>
+
+  <!-- 商品瀑布流（医疗健康商品） -->
+  <view class="waterfall-section">
+    <view class="section-header">
+      <text class="section-title">🔥 精选推荐</text>
+      <text class="more-link" bindtap="loadMore">更多 ›</text>
+    </view>
+    
+    <view class="waterfall-container">
+      <view class="waterfall-column left-column">
+        <view wx:for="{{leftProductList}}" wx:key="id" class="product-card" bindtap="onProductTap" data-id="{{item.id}}">
+          <image class="product-img" src="{{item.image}}" mode="aspectFill"></image>
+          <view class="product-info">
+            <text class="product-title">{{item.title}}</text>
+            <view class="product-price-row">
+              <text class="product-price">¥{{item.price}}</text>
+              <text class="product-sales">月销{{item.sales}}件</text>
+            </view>
+            <view class="product-tag" wx:if="{{item.tag}}">
+              <text class="tag-text">{{item.tag}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="waterfall-column right-column">
+        <view wx:for="{{rightProductList}}" wx:key="id" class="product-card" bindtap="onProductTap" data-id="{{item.id}}">
+          <image class="product-img" src="{{item.image}}" mode="aspectFill"></image>
+          <view class="product-info">
+            <text class="product-title">{{item.title}}</text>
+            <view class="product-price-row">
+              <text class="product-price">¥{{item.price}}</text>
+              <text class="product-sales">月销{{item.sales}}件</text>
+            </view>
+            <view class="product-tag" wx:if="{{item.tag}}">
+              <text class="tag-text">{{item.tag}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+    <view class="load-more" wx:if="{{hasMore}}">
+      <text class="load-more-text" bindtap="loadMore">加载更多</text>
+    </view>
+    <view class="no-more" wx:else>
+      <text class="no-more-text">没有更多商品了</text>
+    </view>
+  </view>
+
+</view>
